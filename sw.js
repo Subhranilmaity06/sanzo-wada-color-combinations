@@ -1,12 +1,12 @@
 // Offline reading: the page is revalidated with the server when online and served from cache when not.
-const CACHE = 'adcc-7b204e9b82';
+const CACHE = 'swcc-7b204e9b82';
 const CORE = ["./", "index.html", "about.html", "manifest.webmanifest", "icon.svg", "icon-32.png", "apple-touch-icon.png", "icon-192.png", "icon-512.png", "fonts/shippori-mincho-400.woff2", "fonts/shippori-mincho-500.woff2", "fonts/zen-kaku-gothic-new-400.woff2", "fonts/zen-kaku-gothic-new-500.woff2", "fonts/ibm-plex-mono-400.woff2"];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys()
-    .then(keys => Promise.all(keys.filter(k => k.startsWith('adcc-') && k !== CACHE).map(k => caches.delete(k))))
+    .then(keys => Promise.all(keys.filter(k => (k.startsWith('swcc-') && k !== CACHE) || k.startsWith('adcc-')).map(k => caches.delete(k))))
     .then(() => self.clients.claim()));
 });
 self.addEventListener('fetch', e => {
