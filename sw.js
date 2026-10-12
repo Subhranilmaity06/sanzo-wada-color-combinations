@@ -2,7 +2,7 @@
 const CACHE = 'swcc-4668a8a03e';
 const CORE = ["./", "index.html", "about.html", "manifest.webmanifest", "icon.svg", "icon-32.png", "apple-touch-icon.png", "icon-192.png", "icon-512.png", "fonts/shippori-mincho-400.woff2", "fonts/shippori-mincho-500.woff2", "fonts/zen-kaku-gothic-new-400.woff2", "fonts/zen-kaku-gothic-new-500.woff2", "fonts/ibm-plex-mono-400.woff2"];
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE.map(u => new Request(u, {cache: 'reload'})))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys()
