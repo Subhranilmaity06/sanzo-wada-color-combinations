@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>A Dictionary of Color Combinations</title>
-<meta name="description" content="A page-turning digital edition of Sanzo Wada's 348 color combinations, with CMYK, RGB and HEX values for all 159 colors.">
+<title>Sanzo Wada Color Combinations · All 348 palettes with CMYK, RGB and HEX</title>
+<meta name="description" content="A free, unofficial interactive companion to Sanzo Wada's A Dictionary of Color Combinations: turn the pages of all 348 combinations and 159 colors, with CMYK, RGB and HEX values for every swatch.">
 <meta name="theme-color" content="#e8e7e3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#111113" media="(prefers-color-scheme: dark)">
 <meta name="color-scheme" content="light dark">
-<link rel="canonical" href="https://subhranilmaity06.github.io/dictionary-of-color-combinations/">
+<link rel="canonical" href="https://subhranilmaity06.github.io/sanzo-wada-color-combinations/">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="icon" href="icon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -16,16 +16,20 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Color Dictionary">
+<meta name="apple-mobile-web-app-title" content="Wada Colors">
+<meta name="author" content="Subhranil Maity">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:title" content="A Dictionary of Color Combinations">
-<meta property="og:description" content="A page-turning digital edition of Sanzo Wada's 348 color combinations, with CMYK, RGB and HEX values for all 159 colors.">
-<meta property="og:url" content="https://subhranilmaity06.github.io/dictionary-of-color-combinations/">
-<meta property="og:image" content="https://subhranilmaity06.github.io/dictionary-of-color-combinations/og.png">
+<meta property="og:site_name" content="Sanzo Wada Color Combinations">
+<meta property="og:title" content="Sanzo Wada Color Combinations">
+<meta property="og:description" content="A free, unofficial interactive companion to Sanzo Wada's A Dictionary of Color Combinations: turn the pages of all 348 combinations and 159 colors, with CMYK, RGB and HEX values for every swatch.">
+<meta property="og:url" content="https://subhranilmaity06.github.io/sanzo-wada-color-combinations/">
+<meta property="og:image" content="https://subhranilmaity06.github.io/sanzo-wada-color-combinations/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A Dictionary of Color Combinations, with seven sample combinations">
+<meta property="og:image:alt" content="Sanzo Wada Color Combinations, with seven sample combinations">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://subhranilmaity06.github.io/sanzo-wada-color-combinations/#website", "url": "https://subhranilmaity06.github.io/sanzo-wada-color-combinations/", "name": "Sanzo Wada Color Combinations", "alternateName": "Wada Color Combinations", "description": "A free, unofficial interactive companion to Sanzo Wada's A Dictionary of Color Combinations: turn the pages of all 348 combinations and 159 colors, with CMYK, RGB and HEX values for every swatch.", "inLanguage": "en", "publisher": {"@id": "https://subhranilmaity06.github.io/sanzo-wada-color-combinations/#maker"}}, {"@type": "Person", "@id": "https://subhranilmaity06.github.io/sanzo-wada-color-combinations/#maker", "name": "Subhranil Maity", "url": "https://github.com/Subhranilmaity06"}, {"@type": "WebApplication", "@id": "https://subhranilmaity06.github.io/sanzo-wada-color-combinations/#edition", "name": "Sanzo Wada Color Combinations", "url": "https://subhranilmaity06.github.io/sanzo-wada-color-combinations/", "applicationCategory": "DesignApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "creator": {"@id": "https://subhranilmaity06.github.io/sanzo-wada-color-combinations/#maker"}, "image": "https://subhranilmaity06.github.io/sanzo-wada-color-combinations/og.png", "description": "A free, unofficial interactive companion to Sanzo Wada's A Dictionary of Color Combinations: turn the pages of all 348 combinations and 159 colors, with CMYK, RGB and HEX values for every swatch.", "isBasedOn": {"@type": "Book", "name": "A Dictionary of Color Combinations", "isbn": "9784861522475", "author": {"@type": "Person", "name": "Sanzo Wada"}, "publisher": {"@type": "Organization", "name": "Seigensha"}}}]}</script>
 <link rel="preload" href="fonts/shippori-mincho-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/zen-kaku-gothic-new-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -192,12 +196,14 @@ button{font:inherit;color:inherit;touch-action:manipulation}
 .cv__spectrum{display:flex;width:7.2em;height:.2em;margin-top:2.2em;opacity:.95}
 .cv__spectrum i{flex:1}
 .cv__foot{display:flex;justify-content:space-between;align-items:flex-end;gap:1em}
+.cv__foot .seal{font-size:1.15em}
 .cv__by{display:flex;align-items:center;gap:.7em;font-family:var(--font-display);font-size:1em;letter-spacing:.08em}
 .cv__by .seal{font-size:.9em}
 .cv__years{font-family:var(--font-data);font-size:.5em;letter-spacing:.24em;opacity:.55}
 .bk{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4em;text-align:center}
 .bk .seal{font-size:1.3em}
 .bk p{margin:0;font-family:var(--font-data);font-size:.5em;letter-spacing:.32em;text-transform:uppercase;opacity:.6}
+.bk .bk__url{position:absolute;left:0;right:0;bottom:3.4em;font-size:.46em;letter-spacing:.08em;text-transform:none;opacity:.42}
 
 /* front matter */
 .page--mosaic .pb{justify-content:flex-start;gap:1.4em}
@@ -205,11 +211,10 @@ button{font:inherit;color:inherit;touch-action:manipulation}
 .cap{font-size:.6em;color:var(--usuzumi);margin:0;line-height:1.6;max-width:26em;flex:none}
 .tp{flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:3em}
 .tp__kicker{margin:0 0 1.2em;font-size:.52em;letter-spacing:.44em;text-transform:uppercase;color:var(--usuzumi)}
-.tp h1{margin:0;font-family:var(--font-display);font-weight:400;font-size:2.4em;line-height:1.05;letter-spacing:-.02em}
-.tp h1 span{display:block}
+.tp__title{margin:0;font-family:var(--font-display);font-weight:400;font-size:2.4em;line-height:1.05;letter-spacing:-.02em}
+.tp__title span{display:block}
 .tp__rule{width:2.4em;height:1px;background:var(--sumi);opacity:.5;margin:2.4em 0 1.6em}
-.tp__by{margin:0;display:flex;align-items:center;gap:.6em;font-family:var(--font-display);font-size:.95em;letter-spacing:.06em}
-.tp__by .seal{font-size:.8em}
+.tp__sub{margin:0;font-family:var(--font-display);font-size:.9em;line-height:1.55;max-width:17em}
 .tp__meta{margin:.8em 0 0;font-family:var(--font-data);font-size:.52em;letter-spacing:.2em;text-transform:uppercase;color:var(--usuzumi)}
 .tp__src{margin:3.4em 0 0;font-size:.66em;line-height:1.75;max-width:23em;color:var(--usuzumi)}
 .prose{display:block;padding-top:1.2em}
@@ -217,6 +222,8 @@ button{font:inherit;color:inherit;touch-action:manipulation}
 .prose h2{font-family:var(--font-display);font-weight:500;font-size:1.3em;line-height:1.25;margin:0 0 1em;text-wrap:balance}
 .prose h3{font-size:.56em;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--usuzumi);margin:2.3em 0 1em}
 .prose p{font-size:.72em;line-height:1.75;margin:0 0 .9em;max-width:34em}
+.prose a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em}
+.prose strong{font-weight:500}
 .prose ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.5em}
 .prose li{display:grid;grid-template-columns:5.4em 1fr;gap:.8em;font-size:.72em;line-height:1.5}
 .prose li b{font-family:var(--font-data);font-weight:400;font-size:.9em;color:var(--usuzumi)}
@@ -358,7 +365,8 @@ html{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bott
 </style>
 </head>
 <body>
-<noscript><p style="padding:2em;font:16px/1.6 Georgia,serif">This book turns its pages with JavaScript. Please enable it to read.</p></noscript>
+<noscript><div style="max-width:36em;margin:0 auto;padding:3em 1.5em;font:17px/1.7 Georgia,serif;color:#1b1b1d"><p><strong>Sanzo Wada Color Combinations</strong> turns its pages with JavaScript. Please enable it to read the book.</p><p><a href="about.html">Read about this site</a></p></div></noscript>
+<header class="sr"><h1>Sanzo Wada Color Combinations</h1><p>A free, unofficial interactive companion to Sanzo Wada’s <em>A Dictionary of Color Combinations</em>: all 348 combinations of two, three and four colors, and an index of 159 colors with CMYK, RGB and HEX values.</p><p><a href="about.html">About this site and its maker</a></p></header>
 
 <div class="app">
   <main class="stage" id="stage" aria-label="Book">
@@ -486,6 +494,7 @@ function buildPages(plan) {
     plan.breaks[fi].forEach((items, k) => { const idx = add('index', {fam: fi, items, first: k === 0}); items.forEach(i => (colorPage[i] = idx)); });
   });
   plan.prose.notes.forEach((blocks, k) => { const i = add('notes', {blocks, key: k ? 'notes' + k : 'notes'}); if (!k) P.notes = i; });
+  plan.prose.colophon.forEach((blocks, k) => { const i = add('colophon', {blocks, key: k ? 'colophon' + k : 'colophon'}); if (!k) P.colophon = i; });
   if (PAGES.length % 2 === 0) add('blank');
   P.back = add('back');
   N = PAGES.length;
@@ -509,7 +518,7 @@ function pageOf(a) {
 const PROSE = {
   about: {rh: 'About this edition', blocks: [
     `<h2>Sanzo Wada and his color combinations</h2><p>Sanzo Wada (1883–1967) was a Japanese painter, teacher and costume designer, and an early champion of standard color references in Japan. In 1933–34 he published <em>Haishoku Soukan</em>, six small volumes of color combinations for working artists and designers.</p>`,
-    `<p>This dictionary gathers 348 of those combinations from a palette of 159 colors. Many of the English names come from Robert Ridgway’s <em>Color Standards and Color Nomenclature</em> (1912), which is why some sound unusual today.</p>`,
+    `<p>This edition gathers 348 of those combinations from a palette of 159 colors. Many of the English names come from Robert Ridgway’s <em>Color Standards and Color Nomenclature</em> (1912), which is why some sound unusual today.</p>`,
     `<h3>Arrangement</h3><ul><li><b>001–120</b><span>Two colors</span></li><li><b>121–240</b><span>Three colors</span></li><li><b>241–348</b><span>Four colors</span></li><li><b>Index</b><span>Every color, its CMYK recipe and the combinations that use it</span></li></ul>`,
     `<h3>Reading</h3><p>Drag a page to turn it, or use the arrows, the arrow keys or the page edges. Select any swatch for its CMYK, RGB and HEX values.</p>`
   ]},
@@ -517,6 +526,12 @@ const PROSE = {
     `<h2>Notes on this edition</h2><h3>Color values</h3><p>The book gives each color as a CMYK print recipe. Screens mix light, not ink, so every color here was converted from CMYK to sRGB with a generic print profile. The results are close, but expect some difference from the printed page and between displays. Use the CMYK values for print work.</p>`,
     `<h3>Checked data</h3><p>The color list and every combination number were checked against the printed color index: 159 colors and 348 combinations, of which 120 use two colors, 120 use three and 108 use four.</p>`,
     `<h3>Order within a combination</h3><p>Colors in each combination are listed in index order, which can differ from where they sit on the printed page.</p>`
+  ]},
+  colophon: {rh: 'Colophon', blocks: [
+    `<h2>Colophon</h2><p>This digital edition was designed and built by <strong>Subhranil Maity</strong> as a free, quiet way to read and use Sanzo Wada’s combinations on any screen: a book that turns like paper, with every value a tap away. <a href="https://subhranilmaity06.github.io/sanzo-wada-color-combinations/about.html" target="_blank" rel="noopener">More about this site</a>.</p>`,
+    `<h3>The original book</h3><p>The combinations come from Wada’s <em>Haishoku Soukan</em> (1933–34). The printed <em>A Dictionary of Color Combinations</em> is published by Seigensha (ISBN 978-4-86152-247-5). If these colors are useful to you, consider owning it: <a href="https://www.seigensha.com/" target="_blank" rel="noopener">Seigensha</a> · <a href="https://search.worldcat.org/search?q=bn%3A9784861522475" target="_blank" rel="noopener">find it in a library</a>.</p>`,
+    `<h3>Rights and removal</h3><p>An unofficial, non-commercial edition, not affiliated with Seigensha or with Sanzo Wada’s estate. It contains no scans or text from the printed book. If you hold rights to this material and want anything changed or removed, <a href="https://github.com/Subhranilmaity06/sanzo-wada-color-combinations/issues" target="_blank" rel="noopener">open an issue on GitHub</a>.</p>`,
+    `<h3>Made with</h3><p>Shippori Mincho, Zen Kaku Gothic New and IBM Plex Mono. Source on <a href="https://github.com/Subhranilmaity06/sanzo-wada-color-combinations" target="_blank" rel="noopener">GitHub</a>.</p>`
   ]}
 };
 
@@ -547,6 +562,7 @@ const tocList = (pg = k => k) => [
   ['IV. Color Index', pg(P.index), 'major'],
   ...FAM.map(f => [f.title, pg(f.page), 'sub']),
   ['Notes on this edition', pg(P.notes), 'major'],
+  ['Colophon', pg(P.colophon), 'major'],
 ];
 const strip = list => `<div class="strip" aria-hidden="true">${list.map(cs => `<span>${cs.map(i => `<i style="background:${C[i].h}"></i>`).join('')}</span>`).join('')}</div>`;
 const spectrum = () => C.map(c => `<i style="background:${c.h}"></i>`).join('');
@@ -556,28 +572,29 @@ function pageHTML(idx) {
   switch (p.t) {
     case 'cover':
       return `<div class="cv">
-        <div class="cv__top"><span>Volume I</span><span>No. 001–348</span></div>
+        <div class="cv__top"><span>Unofficial edition</span><span>No. 001–348</span></div>
         <div class="cv__mid">
-          <p class="cv__kicker">A Dictionary of</p>
-          <h1 class="cv__title"><span>Color</span><span>Combinations</span></h1>
+          <p class="cv__kicker">Sanzo Wada</p>
+          <h2 class="cv__title"><span>Color</span><span>Combinations</span></h2>
           <div class="cv__spectrum" aria-hidden="true">${spectrum()}</div>
         </div>
-        <div class="cv__foot"><div class="cv__by">Sanzo Wada <span class="seal" aria-hidden="true"></span></div><div class="cv__years">1933–34</div></div>
+        <div class="cv__foot"><div class="cv__years">Haishoku Soukan · 1933–34</div><span class="seal" aria-hidden="true"></span></div>
       </div>`;
     case 'mosaic':
       return `${rh('All 159 colors')}<div class="pb"><div class="mosaic">${C.map((c, i) => sw(i)).join('')}</div>
         <p class="cap">Every color in the dictionary, in index order. Select a swatch for its values and the combinations that use it.</p></div>${fo(idx)}`;
     case 'title':
       return `<div class="tp">
-        <p class="tp__kicker">A Dictionary of</p>
-        <h1><span>Color</span><span>Combinations</span></h1>
+        <p class="tp__kicker">Sanzo Wada</p>
+        <h2 class="tp__title"><span>Color</span><span>Combinations</span></h2>
         <div class="tp__rule" aria-hidden="true"></div>
-        <p class="tp__by">Sanzo Wada <span class="seal" aria-hidden="true"></span></p>
-        <p class="tp__meta">Volume I · 348 combinations · 159 colors</p>
-        <p class="tp__src">First published as <em>Haishoku Soukan</em> in six volumes, 1933–34. An unofficial digital edition for study.</p>
+        <p class="tp__sub">An unofficial companion to <em>A Dictionary of Color Combinations</em></p>
+        <p class="tp__meta">348 combinations · 159 colors</p>
+        <p class="tp__src">Combinations by Sanzo Wada, first published as <em>Haishoku Soukan</em> in six volumes, 1933–34. Digital edition by Subhranil Maity. Not affiliated with Seigensha or with Sanzo Wada’s estate.</p>
       </div>${fo(idx)}`;
     case 'about':
     case 'notes':
+    case 'colophon':
       return `${rh(PROSE[p.t].rh)}<div class="pb prose">${p.blocks.map(b => PROSE[p.t].blocks[b]).join('')}</div>${fo(idx)}`;
     case 'contents':
       return `${rh('Contents')}<div class="pb"><div class="toc">${p.items.map(i => tocItem(...tocList()[i])).join('')}</div></div>${fo(idx)}`;
@@ -603,7 +620,7 @@ function pageHTML(idx) {
       </div>${fo(idx)}`;
     }
     case 'back':
-      return `<div class="bk"><span class="seal" aria-hidden="true"></span><p>348 combinations · 159 colors</p></div>`;
+      return `<div class="bk"><span class="seal" aria-hidden="true"></span><p>348 combinations · 159 colors</p><p class="bk__url">subhranilmaity06.github.io/sanzo-wada-color-combinations</p></div>`;
     default:
       return '';
   }
@@ -820,7 +837,7 @@ book.addEventListener('click', e => {
 
 /* ---------- toolbar & status ---------- */
 const scrub = $('#scrub');
-const NAMES = {cover: 'Cover', mosaic: 'All colors', title: 'Title', about: 'About', contents: 'Contents', divider: '', idivider: 'Color Index', notes: 'Notes', back: 'Back cover', blank: ''};
+const NAMES = {cover: 'Cover', mosaic: 'All colors', title: 'Title', about: 'About', contents: 'Contents', divider: '', idivider: 'Color Index', notes: 'Notes', colophon: 'Colophon', back: 'Back cover', blank: ''};
 function describe(pages) {
   const ns = pages.flatMap(i => PAGES[i] && PAGES[i].t === 'combo' ? PAGES[i].ns : []);
   if (ns.length) {

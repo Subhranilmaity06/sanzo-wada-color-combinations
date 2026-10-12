@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://subhranilmaity06.github.io/sanzo-wada-color-combinations/sitemap.xml

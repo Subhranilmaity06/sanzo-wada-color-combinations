@@ -1,7 +1,7 @@
 {
-  "name": "A Dictionary of Color Combinations",
-  "short_name": "Color Dictionary",
-  "description": "A page-turning digital edition of Sanzo Wada's 348 color combinations, with CMYK, RGB and HEX values for all 159 colors.",
+  "name": "Sanzo Wada Color Combinations",
+  "short_name": "Wada Colors",
+  "description": "A free, unofficial interactive companion to Sanzo Wada's A Dictionary of Color Combinations: turn the pages of all 348 combinations and 159 colors, with CMYK, RGB and HEX values for every swatch.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
