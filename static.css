@@ -1,0 +1,125 @@
+/* Shared style for the crawlable pages (combinations, colors, 404).
+   Layout: one generous reading column on paper; hairlines instead of boxes; ink, paper and one seal. */
+@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/shippori-mincho-400.woff2) format("woff2")}
+@font-face{font-family:"Shippori Mincho";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/shippori-mincho-500.woff2) format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/zen-kaku-gothic-new-400.woff2) format("woff2")}
+@font-face{font-family:"Zen Kaku Gothic New";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/zen-kaku-gothic-new-500.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-mono-400.woff2) format("woff2")}
+:root{
+  --paper:#f6f5f1; --ink:#1b1b1d; --muted:#66666c; --hair:rgba(27,27,29,.14); --soft:rgba(27,27,29,.05); --shu:#c2402c;
+  --font-display:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",Georgia,serif;
+  --font-body:"Zen Kaku Gothic New","Hiragino Sans","Helvetica Neue",Arial,sans-serif;
+  --font-data:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--paper:#121214;--ink:#ebe9e3;--muted:#a3a3ab;--hair:rgba(235,233,227,.14);--soft:rgba(235,233,227,.06);color-scheme:dark}
+}
+:root[data-theme="dark"]{--paper:#121214;--ink:#ebe9e3;--muted:#a3a3ab;--hair:rgba(235,233,227,.14);--soft:rgba(235,233,227,.06);color-scheme:dark}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.75 var(--font-body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.22em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--shu);outline-offset:3px}
+.wrap{max-width:66rem;margin:0 auto;padding-inline:max(20px,5vw);padding-block:max(18px,env(safe-area-inset-top)) max(40px,env(safe-area-inset-bottom))}
+
+/* header */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.6rem 1.4rem;border-bottom:1px solid var(--hair)}
+.brand{display:inline-flex;align-items:center;gap:.7rem;text-decoration:none;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap}
+.seal{display:inline-block;width:.95rem;height:.95rem;flex:none;background:var(--shu);border-radius:1px;box-shadow:inset 0 0 0 .09rem var(--shu),inset 0 0 0 .14rem rgba(255,255,255,.5)}
+.nav{display:flex;align-items:center;gap:.2rem 1.3rem;flex-wrap:wrap;justify-content:flex-end;font-size:.86rem}
+.nav a{text-decoration:none;color:var(--muted);padding-block:.4rem}
+.nav a:hover,.nav a[aria-current]{color:var(--ink)}
+.nav .pill{color:var(--paper);background:var(--ink);padding:.5rem 1rem;border-radius:999px}
+.nav .pill:hover{color:var(--paper);opacity:.9}
+.crumbs{font-size:.78rem;color:var(--muted);padding-block:1.1rem 0;display:flex;flex-wrap:wrap;gap:.4rem}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+
+/* type */
+.kicker{margin:clamp(2.2rem,6vw,4rem) 0 1rem;font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+h1{margin:0;font:400 clamp(2.3rem,7vw,3.8rem)/1.05 var(--font-display);letter-spacing:-.022em;text-wrap:balance}
+h2{margin:0 0 1.1rem;font:500 1.35rem/1.3 var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+.lede{margin:1.3rem 0 0;max-width:40rem;font:400 clamp(1.02rem,2.2vw,1.18rem)/1.7 var(--font-display)}
+.note{color:var(--muted);font-size:.9rem;max-width:40rem}
+section{padding-block:clamp(2.2rem,5vw,3.4rem);border-top:1px solid var(--hair)}
+section:first-of-type{border-top:0}
+
+/* a combination as one continuous band */
+.band{display:flex;height:clamp(9rem,30vw,17rem);margin-block:clamp(1.8rem,4vw,2.8rem)}
+.band a{flex:1;transition:flex-grow .2s ease-out}
+.band a:hover{flex-grow:1.25}
+.band--one{height:clamp(10rem,32vw,18rem)}
+.band span{flex:1}
+
+/* value rows */
+.vlist{display:grid;gap:0;border-top:1px solid var(--hair)}
+.vrow{display:grid;grid-template-columns:3.2rem minmax(0,1fr) auto;gap:1.1rem;align-items:center;padding-block:.9rem;border-bottom:1px solid var(--hair)}
+.vrow__sw{width:3.2rem;height:3.2rem;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.vrow__name{display:block;font:500 1.05rem/1.3 var(--font-display);text-decoration:none}
+.vrow__name:hover{text-decoration:underline}
+.vrow__sw{display:block}
+.vrow__vals{display:flex;flex-wrap:wrap;gap:.1rem 1.1rem;margin-top:.25rem;font:400 .8rem/1.6 var(--font-data);color:var(--muted)}
+.vrow__vals b{font-weight:400;color:var(--ink)}
+.kv{display:grid;grid-template-columns:5rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding-block:.75rem;border-bottom:1px solid var(--hair)}
+.kv dt{font-size:.72rem;letter-spacing:.2em;color:var(--muted)}
+.kv dd{margin:0;font:400 .95rem/1.4 var(--font-data)}
+dl{margin:0;border-top:1px solid var(--hair)}
+
+/* buttons */
+.btn{font:inherit;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--hair);border-radius:999px;padding:.45rem .9rem;cursor:pointer;white-space:nowrap;transition:transform .1s ease-out}
+.btn:hover{color:var(--ink);border-color:var(--muted)}
+.btn:active{transform:scale(.96)}
+.btn--ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn--ink:hover{color:var(--paper)}
+.actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem}
+pre{margin:0;padding:1rem 1.1rem;background:var(--soft);overflow-x:auto;font:400 .82rem/1.7 var(--font-data);border-radius:2px}
+
+/* strips (lists of combinations) */
+.strips{display:grid;grid-template-columns:repeat(auto-fill,minmax(14.5rem,1fr));gap:.85rem 1.6rem}
+.strip{display:grid;grid-template-columns:2.6rem minmax(0,1fr);align-items:center;gap:.8rem;text-decoration:none}
+.strip__no{font:400 .78rem/1 var(--font-data);color:var(--muted);letter-spacing:.04em}
+.strip__bar{display:flex;height:2.3rem;transition:transform .15s ease-out}
+.strip:hover .strip__bar{transform:translateX(3px)}
+.strip:hover .strip__no{color:var(--ink)}
+.strip__bar i{flex:1}
+
+/* color grid */
+.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.2rem,1fr));gap:1.4rem 1.2rem}
+.chip{text-decoration:none;display:block}
+.chip__sw{display:block;aspect-ratio:4/3;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);transition:transform .15s ease-out}
+.chip:hover .chip__sw{transform:translateY(-3px)}
+.chip__name{display:block;margin-top:.55rem;font:500 .95rem/1.3 var(--font-display)}
+.chip__hex{display:block;font:400 .76rem/1.6 var(--font-data);color:var(--muted)}
+.fam{scroll-margin-top:1rem}
+.toc{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;margin-top:1.4rem;font-size:.88rem}
+
+/* previous / next */
+.pn{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;padding-block:1.6rem;border-top:1px solid var(--hair);font-size:.9rem}
+.pn a{text-decoration:none}
+.pn a:hover{text-decoration:underline}
+.pn .next{text-align:right}
+.pn .mid{justify-self:center}
+
+/* footer */
+.foot{margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--hair);display:grid;gap:.8rem;font-size:.8rem;color:var(--muted)}
+.foot__links{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem}
+.foot__links a{text-decoration:none}
+.foot__links a:hover{text-decoration:underline}
+.foot p{margin:0;max-width:44rem}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--paper);font-size:.85rem;padding:.6rem 1rem;border-radius:999px;box-shadow:0 10px 30px -12px rgba(0,0,0,.4)}
+.toast[hidden]{display:none}
+
+@media (max-width:640px){
+  .brand__name{display:none}
+  .nav{gap:.1rem .9rem;font-size:.82rem}
+  .nav .pill{padding:.45rem .85rem}
+  .vrow{grid-template-columns:2.6rem minmax(0,1fr)}
+  .vrow__sw{width:2.6rem;height:2.6rem}
+  .vrow .btn{grid-column:2;justify-self:start}
+  .kv{grid-template-columns:4.2rem minmax(0,1fr) auto}
+  .pn{grid-template-columns:1fr 1fr}
+  .pn .mid{grid-column:1 / -1;grid-row:2;justify-self:start}
+}
+@media (prefers-reduced-motion: reduce){.band a,.strip__bar,.chip__sw,.btn{transition:none}}
