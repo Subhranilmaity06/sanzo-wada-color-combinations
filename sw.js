@@ -1,5 +1,5 @@
 // Offline reading: the page is revalidated with the server when online and served from cache when not.
-const CACHE = 'swcc-f0b841f3fb';
+const CACHE = 'swcc-80b52f1295';
 const CORE = ["./", "index.html", "about.html", "manifest.webmanifest", "icon.svg", "icon-32.png", "apple-touch-icon.png", "icon-192.png", "icon-512.png", "fonts/shippori-mincho-400.woff2", "fonts/shippori-mincho-500.woff2", "fonts/zen-kaku-gothic-new-400.woff2", "fonts/zen-kaku-gothic-new-500.woff2", "fonts/ibm-plex-mono-400.woff2"];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE.map(u => new Request(u, {cache: 'reload'})))).then(() => self.skipWaiting()));
